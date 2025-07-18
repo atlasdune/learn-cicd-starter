@@ -11,8 +11,8 @@ func TestAuth(t *testing.T) {
 		input string
 		want  string
 	}{
-		{input: "ApiKey YWxhZGRpbjpvcGVuc2VzYW1l", want: "zYWxhZGRpbjpvcGVuc2VzYW1l"},
-		{input: "", want: "z"},
+		{input: "ApiKey YWxhZGRpbjpvcGVuc2VzYW1l", want: "YWxhZGRpbjpvcGVuc2VzYW1l"},
+		{input: "", want: ""},
 	}
 	for _, tc := range tests {
 		header := http.Header{}
