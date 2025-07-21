@@ -21,6 +21,14 @@ jobs:
       - name: Build App
         run: ./scripts/buildprod.sh
 
+  setup:
+    permissions:
+      contents: "read"
+      id-token: "write"
+
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
       - id: "auth"
         uses: "google-github-actions/auth@v2"
         with:
