@@ -40,8 +40,8 @@ jobs:
       - id: "auth"
         uses: "google-github-actions/auth@v2"
         with:
-          workload_identity_provider: "projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider"
-          service_account: "my-service-account@my-project.iam.gserviceaccount.com"
+          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+          project_id: notely-466411
 
       - name: "Set up Cloud SDK"
         uses: "google-github-actions/setup-gcloud@v2"
