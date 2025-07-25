@@ -47,7 +47,7 @@ jobs:
         run: "gcloud info"
 
       - name: migrating up
-        run: goose turso DATABASE_URL up
+        run: cd sql/schema/ && goose turso DATABASE_URL up
 
       - name: build and push to artifact registry
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/notely-466411/notely-ar-repo/notely:latest .
